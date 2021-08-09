@@ -76,6 +76,10 @@ h1 {
   flex-direction: column;
 }
 
+.dir-row {
+  flex-direction: row;
+}
+
 .grid {
   display: grid;
 }
@@ -112,8 +116,12 @@ body > div {
   flex-grow: 2;
   position: relative;
 }
+.box .judul {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+}
 .box .panel {
-  display: grid;
   position: absolute;
   top: 0;
   left: 0;
@@ -123,17 +131,24 @@ body > div {
 .box .panel > div {
   opacity: 0;
   padding: 7px 11px;
+  flex-basis: 25%;
 }
-.box .panel > div > h5 {
+.box .panel > div h5 {
   position: relative;
-  left: 10px;
-  transition: left 0.3s;
+  top: 10px;
+  transition: top 0.3s;
+}
+.box .panel > div p {
+  word-wrap: break-word;
+}
+.box .panel > div ul {
+  list-style: none;
 }
 .box .panel > div:hover {
   opacity: 1;
 }
-.box .panel > div:hover > h5 {
-  left: 0;
+.box .panel > div:hover h5 {
+  top: 0;
 }
 
 footer {
