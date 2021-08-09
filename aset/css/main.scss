@@ -1,9 +1,9 @@
+// default
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 12pt;
@@ -11,19 +11,19 @@ body {
   background: #000;
 }
 
+// link //
 a, a:visited {
   color: #ccc;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
 
+// heading //
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
-
 /*
 h6 {font-size: 14pt;}
 h5 {font-size: 16pt;}
@@ -32,66 +32,46 @@ h3 {font-size: 24pt;}
 h2 {font-size: 28pt;}
 h1 {font-size: 64pt;}
 */
-h6 {
-  font-size: 1em;
-}
+h6 {font-size: 1em;}
+h5 {font-size: 3em;}
+h4 {font-size: 5em;}
+h3 {font-size: 7em;}
+h2 {font-size: 9em;}
+h1 {font-size: 11em;}
 
-h5 {
-  font-size: 3em;
-}
-
-h4 {
-  font-size: 5em;
-}
-
-h3 {
-  font-size: 7em;
-}
-
-h2 {
-  font-size: 9em;
-}
-
-h1 {
-  font-size: 11em;
-}
-
+// style
+// flex //
 .flex {
   display: flex;
 }
-
 .h-justify {
   justify-content: space-between;
 }
-
 .h-tengah {
   justify-content: center;
 }
-
 .v-tengah {
   align-items: center;
 }
-
 .dir-kol {
   flex-direction: column;
 }
 
+// grid //
 .grid {
   display: grid;
 }
-
 .kol-4 {
   grid-template-columns: auto auto auto auto;
 }
-
 .kol-5 {
   grid-template-columns: auto auto auto auto auto;
 }
-
 .row-2 {
   grid-template-rows: auto auto;
 }
 
+// elements
 body > div {
   position: absolute;
   top: 0;
@@ -111,33 +91,35 @@ body > div {
   min-height: 80%;
   flex-grow: 2;
   position: relative;
-}
-.box .panel {
-  display: grid;
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-.box .panel > div {
-  opacity: 0;
-  padding: 7px 11px;
-}
-.box .panel > div > h5 {
-  position: relative;
-  left: 10px;
-  transition: left 0.3s;
-}
-.box .panel > div:hover {
-  opacity: 1;
-}
-.box .panel > div:hover > h5 {
-  left: 0;
+
+  .panel {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+
+    > div {
+      opacity: 0;
+      padding: 7px 11px;
+
+      > h5 {
+        position: relative;
+        left: 10px;
+        transition: left 0.3s;
+      }
+    }
+    > div:hover {
+      opacity: 1;
+
+      > h5 {
+        left: 0;
+      }
+    }
+  }
 }
 
 footer {
   margin-top: 15px;
 }
-
-/*# sourceMappingURL=main.css.map */
